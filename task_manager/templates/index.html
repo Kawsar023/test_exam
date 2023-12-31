@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container" style="margin-top: 30px; border: 1px solid gray; padding: 30px;">
+
+    <form method="POST" action="{% url 'cat_store' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="test" class="form-label">Category Name</label>
+          <input type="text" class="form-control" id="test" name="cat_name" aria-describedby="emailHelp">
+          
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Add Category</button>
+      </form>
+
+
+   </div>
+    
+{% endblock  %}
+    
